@@ -16,6 +16,9 @@ package net.slimeexpansion;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
+import net.slimeexpansion.init.SlimeexpansionModItems;
+import net.slimeexpansion.init.SlimeexpansionModEntities;
+
 import net.minecraftforge.network.simple.SimpleChannel;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.NetworkEvent;
@@ -42,6 +45,9 @@ public class SlimeexpansionMod {
 	public SlimeexpansionMod() {
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		SlimeexpansionModItems.REGISTRY.register(bus);
+		SlimeexpansionModEntities.REGISTRY.register(bus);
 
 	}
 
