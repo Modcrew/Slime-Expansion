@@ -1,9 +1,32 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "CoalSlime",
+      "type": "livingentity",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_slime"
+    },
+    {
+      "name": "CoalSlimeTransparentEntityModelCondition",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_slime_transparent_entity_model_condition",
+      "metadata": {
+        "dependencies": []
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.slimeexpansion.coal_slime_spawn_egg": "Coal Slime Spawn Egg",
+      "entity.slimeexpansion.coal_slime": "Coal Slime"
+    }
   },
   "foldersRoot": {
     "name": "~",
