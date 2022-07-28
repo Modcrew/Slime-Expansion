@@ -91,14 +91,6 @@ public class CoalSlimeEntity extends Slime {
 		return super.hurt(source, amount);
 	}
 
-	@Override
-	public void die(DamageSource source) {
-		super.die(source);
-		CoalSlimeEntityDiesProcedure.execute(
-
-		);
-	}
-
 	public static void init() {
 		SpawnPlacements.register(SlimeexpansionModEntities.COAL_SLIME.get(), SpawnPlacements.Type.ON_GROUND,
 				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, (entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
