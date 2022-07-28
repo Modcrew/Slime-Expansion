@@ -16,7 +16,6 @@
       "locked_code": false,
       "registry_name": "coal_slime_transparent_entity_model_condition",
       "metadata": {
-        "return_type": "logic",
         "dependencies": []
       }
     },
@@ -43,22 +42,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "loot_coal_slime"
-    },
-    {
-      "name": "CoalSlimeEntityDies",
-      "type": "procedure",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "coal_slime_entity_dies",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [],
