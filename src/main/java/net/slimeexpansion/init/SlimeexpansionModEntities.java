@@ -24,7 +24,9 @@ public class SlimeexpansionModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, SlimeexpansionMod.MODID);
 	public static final RegistryObject<EntityType<CoalSlimeEntity>> COAL_SLIME = register("coal_slime",
 			EntityType.Builder.<CoalSlimeEntity>of(CoalSlimeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CoalSlimeEntity::new).fireImmune().sized(0.6f, 1.8f));
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CoalSlimeEntity::new)
+
+					.sized(1f, 1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

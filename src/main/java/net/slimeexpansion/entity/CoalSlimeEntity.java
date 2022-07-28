@@ -1,7 +1,6 @@
 
 package net.slimeexpansion.entity;
 
-import net.slimeexpansion.procedures.CoalSlimeEntityDiesProcedure;
 import net.slimeexpansion.init.SlimeexpansionModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -14,7 +13,6 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
@@ -31,18 +29,11 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import java.util.Set;
-
 @Mod.EventBusSubscriber
 public class CoalSlimeEntity extends Slime {
-	private static final Set<ResourceLocation> SPAWN_BIOMES = Set.of(new ResourceLocation("windswept_hills"), new ResourceLocation("taiga"),
-			new ResourceLocation("windswept_gravelly_hills"), new ResourceLocation("snowy_taiga"));
-
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		if (SPAWN_BIOMES.contains(event.getName()))
-			event.getSpawns().getSpawner(MobCategory.MONSTER)
-					.add(new MobSpawnSettings.SpawnerData(SlimeexpansionModEntities.COAL_SLIME.get(), 20, 2, 4));
+		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(SlimeexpansionModEntities.COAL_SLIME.get(), 20, 4, 4));
 	}
 
 	public CoalSlimeEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -79,23 +70,6 @@ public class CoalSlimeEntity extends Slime {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
-	}
-
-	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.getDirectEntity() instanceof AbstractArrow)
-			return false;
-		if (source == DamageSource.CACTUS)
-			return false;
-		if (source == DamageSource.DROWN)
-			return false;
-		return super.hurt(source, amount);
-	}
-
-	@Override
-	public void die(DamageSource source) {
-		super.die(source);
-		CoalSlimeEntityDiesProcedure.execute(source.getEntity());
 	}
 
 	public static void init() {

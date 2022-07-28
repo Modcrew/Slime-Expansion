@@ -2,15 +2,16 @@
 package net.slimeexpansion.client.renderer;
 
 import net.slimeexpansion.entity.CoalSlimeEntity;
-import net.slimeexpansion.client.model.Modelcustom_model;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.model.geom.ModelLayers;
+import net.minecraft.client.model.SlimeModel;
 
-public class CoalSlimeRenderer extends MobRenderer<CoalSlimeEntity, Modelcustom_model<CoalSlimeEntity>> {
+public class CoalSlimeRenderer extends MobRenderer<CoalSlimeEntity, SlimeModel<CoalSlimeEntity>> {
 	public CoalSlimeRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelcustom_model(context.bakeLayer(Modelcustom_model.LAYER_LOCATION)), 0.5f);
+		super(context, new SlimeModel(context.bakeLayer(ModelLayers.SLIME)), 0.5f);
 	}
 
 	@Override

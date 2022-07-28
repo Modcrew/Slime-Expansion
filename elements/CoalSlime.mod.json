@@ -4,20 +4,20 @@
   "definition": {
     "mobName": "Coal Slime",
     "mobLabel": "",
-    "mobModelName": "Modelcustom_model",
+    "mobModelName": "Slime",
     "mobModelTexture": "coalslimealpha.png",
     "mobModelGlowTexture": "",
-    "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelWidth": 1.0,
+    "modelHeight": 1.0,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -10066330,
+      "value": -1,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -16777216,
+      "value": -1,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -63,11 +63,11 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": true,
-    "immuneToArrows": true,
+    "immuneToFire": false,
+    "immuneToArrows": false,
     "immuneToFallDamage": false,
-    "immuneToCactus": true,
-    "immuneToDrowning": true,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
     "immuneToLightning": false,
     "immuneToPotions": false,
     "immuneToPlayer": false,
@@ -98,9 +98,6 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "whenMobDies": {
-      "name": "CoalSlimeEntityDies"
-    },
     "hasAI": true,
     "aiBase": "Slime",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field></block></next></block><block type=\"attack_action\" x=\"284\" y=\"259\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></xml>",
@@ -116,25 +113,9 @@
     "doesDespawnWhenIdle": true,
     "spawningProbability": 20,
     "mobSpawningType": "monster",
-    "minNumberOfMobsPerGroup": 2,
+    "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
-    "restrictionBiomes": [
-      {
-        "value": "snowy_mountains"
-      },
-      {
-        "value": "mutated_taiga"
-      },
-      {
-        "value": "mutated_taiga_cold"
-      },
-      {
-        "value": "mutated_extreme_hills_with_trees"
-      },
-      {
-        "value": "smaller_extreme_hills"
-      }
-    ],
+    "restrictionBiomes": [],
     "spawnInDungeons": false
   }
 }

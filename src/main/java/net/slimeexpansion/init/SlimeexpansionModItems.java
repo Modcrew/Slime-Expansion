@@ -17,6 +17,5 @@ import net.minecraft.world.item.CreativeModeTab;
 public class SlimeexpansionModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, SlimeexpansionMod.MODID);
 	public static final RegistryObject<Item> COAL_SLIME = REGISTRY.register("coal_slime_spawn_egg",
-			() -> new ForgeSpawnEggItem(SlimeexpansionModEntities.COAL_SLIME, -10066330, -16777216,
-					new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+			() -> new ForgeSpawnEggItem(SlimeexpansionModEntities.COAL_SLIME, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 }
