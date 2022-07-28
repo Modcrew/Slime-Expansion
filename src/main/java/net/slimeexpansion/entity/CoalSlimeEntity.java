@@ -1,7 +1,6 @@
 
 package net.slimeexpansion.entity;
 
-import net.slimeexpansion.procedures.CoalSlimeEntityDiesProcedure;
 import net.slimeexpansion.init.SlimeexpansionModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -95,7 +94,9 @@ public class CoalSlimeEntity extends Slime {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		CoalSlimeEntityDiesProcedure.execute(source.getEntity());
+		CoalSlimeEntityDiesProcedure.execute(
+
+		);
 	}
 
 	public static void init() {
