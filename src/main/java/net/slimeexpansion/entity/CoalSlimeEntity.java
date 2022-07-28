@@ -95,7 +95,7 @@ public class CoalSlimeEntity extends Slime {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		CoalSlimeEntityDiesProcedure.execute(this);
+		CoalSlimeEntityDiesProcedure.execute(source.getEntity());
 	}
 
 	public static void init() {

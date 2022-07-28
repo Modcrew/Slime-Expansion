@@ -16,6 +16,7 @@
       "locked_code": false,
       "registry_name": "coal_slime_transparent_entity_model_condition",
       "metadata": {
+        "return_type": "logic",
         "dependencies": []
       }
     },
@@ -53,7 +54,7 @@
       "metadata": {
         "dependencies": [
           {
-            "name": "entity",
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
