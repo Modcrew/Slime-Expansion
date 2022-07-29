@@ -16,6 +16,7 @@ package net.slimeexpansion;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
+import net.slimeexpansion.init.SlimeexpansionModTabs;
 import net.slimeexpansion.init.SlimeexpansionModItems;
 import net.slimeexpansion.init.SlimeexpansionModEntities;
 
@@ -43,7 +44,7 @@ public class SlimeexpansionMod {
 	private static int messageID = 0;
 
 	public SlimeexpansionMod() {
-
+		SlimeexpansionModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		SlimeexpansionModItems.REGISTRY.register(bus);

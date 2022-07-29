@@ -1,0 +1,11 @@
+{
+  "_fv": 28,
+  "_type": "tab",
+  "definition": {
+    "name": "Slime Expansion",
+    "icon": {
+      "value": "Items.SLIME_BALL"
+    },
+    "showSearch": true
+  }
+}
