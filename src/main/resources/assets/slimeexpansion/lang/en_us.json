@@ -1,5 +1,6 @@
 {
   "item.slimeexpansion.coal_slime_spawn_egg": "Coal Slime Spawn Egg",
   "entity.slimeexpansion.coal_slime": "Coal Slime",
-  "itemGroup.tabslime_expansion": "Slime Expansion"
+  "itemGroup.tabslime_expansion": "Slime Expansion",
+  "block.slimeexpansion.slime": "Slime"
 }

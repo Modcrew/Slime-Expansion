@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "slimeexpansion:blocks/slimeplant",
+    "particle": "slimeexpansion:blocks/slimeplant"
+  }
+}

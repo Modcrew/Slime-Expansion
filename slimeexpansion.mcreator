@@ -71,6 +71,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "slime_expansion"
+    },
+    {
+      "name": "Slime",
+      "type": "plant",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slime"
     }
   ],
   "variable_elements": [],
@@ -79,7 +87,8 @@
     "en_us": {
       "item.slimeexpansion.coal_slime_spawn_egg": "Coal Slime Spawn Egg",
       "entity.slimeexpansion.coal_slime": "Coal Slime",
-      "itemGroup.tabslime_expansion": "Slime Expansion"
+      "itemGroup.tabslime_expansion": "Slime Expansion",
+      "block.slimeexpansion.slime": "Slime"
     }
   },
   "foldersRoot": {
